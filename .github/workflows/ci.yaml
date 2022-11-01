@@ -3,7 +3,7 @@ name: "CI Unit Tests"
 on:
   push:
     branches:
-      - main
+      - tmp1
   pull_request:
 
 jobs:
