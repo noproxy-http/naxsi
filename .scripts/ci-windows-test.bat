@@ -9,7 +9,7 @@ set SCRIPT_DIR=%BAD_SLASH_SCRIPT_DIR:\=/%
 set NAXSI_DIR=%SCRIPT_DIR%..
 
 pushd "%NAXSI_DIR%" || exit /b 1
-python .scrpts/naxsi-windows-test-dist.py %NAXSI_DIR%/../nginx-windows/build/dist || exit /b 1
+python .scripts/naxsi-windows-test-dist.py %NAXSI_DIR%/../nginx-windows/build/dist || exit /b 1
 python .scripts/naxsi-gen-tests.py || exit /b 1
 python -m unittest discover unit-tests/python/ -v || exit /b 1
 popd || exit /b 1
